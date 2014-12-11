@@ -1,2 +1,10 @@
-html {background-color: red
+html {
+  color: red;
+  background: #eef;
+  font-family: Palatino, Helvetica, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size: 1em;
+  /*Em ratios provided by http://type-scale.com perfect fourth 1.33*/
 }
