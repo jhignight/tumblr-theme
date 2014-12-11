@@ -43,6 +43,64 @@
         </footer>
       </div>
       {/block:Text}
+      {block:Photo}
+      <article>
+        {block:Title}
+          <header>
+            <h1>
+              <a href='{Permalink}'>{Title}</a>
+            </h1>
+          </header>
+        {/block:Title}
+        <div class='image'>
+          <a href='{Permalink}'>
+            <img src='{PhotoURL-HighRes}' alt='{PhotoAlt}' title='{PhotoAlt}' />
+              <div class='caption'>{Caption}</div>
+            <footer>
+              <a href='{Permalink}'>Posted on {Month} {DayOfMonth}, {Year} {block:HasTags}</a>
+            </footer>
+            <li>Tagged
+              <ul>
+                {block:Tags}
+                <li>
+                  <a href='{TagURL}'>{Tag}</a>
+                </li>
+                {/block:Tags}
+              </ul>
+            </li>
+            {/block:HasTags}
+          </a>
+        </div>
+        {/block:Photo}
+        {block:Link}
+        <article>
+          <header>
+            <h1></h1>
+          </header>
+          <div class='section'>
+            <div class='main'>
+              <h1>
+                <a href='{URL}'>{Name}</a>
+              </h1>
+              {Description}
+            </div>
+            <footer>
+              <a href='{Permalink}'>Posted on {Month} {DayOfMonth}, {Year} {block:HasTags}</a>
+            </footer>
+            <li>Tagged
+              <ul>
+                {block:Tags}
+                <li>
+                  <a href='{TagURL}'>{Tag}</a>
+                </li>
+                {/block:Tags}
+              </ul>
+            </li>
+            {/block:HasTags}
+          </div>
+        </article>
+        {/block:Link}
+      </article>
       {/block:Posts}
     </main>
     <footer id='footer'>

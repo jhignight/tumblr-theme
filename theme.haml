@@ -10,6 +10,7 @@
       %h1 {Josh's Tumblr: Caveat Emptor!}
     %main#main
       {block:Posts}
+
       {block:Text}
       %article
         {block:Title}
@@ -31,6 +32,52 @@
                 {/block:Tags}
             {/block:HasTags}
       {/block:Text}
+
+      {block:Photo}
+      %article
+        {block:Title}
+          %header
+            %h1
+              %a{href:"{Permalink}"} {Title}
+        {/block:Title}
+        .image
+          %a{href:"{Permalink}"
+            %img{src:"{PhotoURL-HighRes}", alt: "{PhotoAlt}", title: "{PhotoAlt}"}
+              .caption {Caption}
+            %footer
+              %a{href: "{Permalink}"} Posted on {Month} {DayOfMonth}, {Year}
+                {block:HasTags}
+            %li Tagged
+              %ul
+                {block:Tags}
+                %li
+                  %a{href:"{TagURL}"} {Tag}
+                {/block:Tags}
+            {/block:HasTags}
+        {/block:Photo}
+
+        {block:Link}
+        %article
+          %header
+            %h1
+          .section
+            .main
+              %h1
+                %a{href: "{URL}"} {Name}
+              {Description}
+            %footer
+              %a{href: "{Permalink}"} Posted on {Month} {DayOfMonth}, {Year}
+                    {block:HasTags}
+            %li Tagged
+              %ul
+                {block:Tags}
+                %li
+                  %a{href:"{TagURL}"} {Tag}
+                {/block:Tags}
+            {/block:HasTags}
+        {/block:Link}
+
+
       {/block:Posts}
     %footer#footer
       %small
