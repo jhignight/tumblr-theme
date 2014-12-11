@@ -1,9 +1,37 @@
-%html{lang: "en", class: "no-js"}
-    %meta{charset: "utf-8"}
-    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
-    %meta{name: "author", content: "Josh Hignight"}
-    {block:Description}
-    %meta{name: "description", content:"{MetaDescription}"}
-    {/block:Description}
-%body
-  %h1
+%html
+  %head
+    %meta{charset:"utf-8"}
+    %meta{name:"viewport",content:"width=device-width,initial-scale=1.0"}
+    %title {Title}
+    %link{rel:"alternate",type:"application/rss+xml",href:"{RSS}"}
+    %link{rel:"stylesheet",href:"http://jhignight.github.io/tumblr-theme/theme.css"}
+  %body
+    %header#header
+      %h1 {Title}
+    %main#main
+      {block:Posts}
+      {block:Text}
+      %article
+        {block:Title}
+        %header
+          %h1
+            %a{href:"{Permalink}"} {Title}
+        {/block:Title}
+        .content {Body}
+        %footer
+          %ul
+            %li
+              %a{href:"{Permalink}"} Post Permalink
+            {block:HasTags}
+            %li Tagged
+              %ul
+                {block:Tags}
+                %li
+                  %a{href:"{TagURL}"} {Tag}
+                {/block:Tags}
+            {/block:HasTags}
+      {/block:Text}
+      {/block:Posts}
+    %footer#footer
+      %small
+        %a{href:"{RSS}"} RSS Feed
