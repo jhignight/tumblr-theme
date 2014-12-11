@@ -20,19 +20,9 @@
             <a href='{Permalink}'>{Title}</a>
           </h1>
         </header>
-        {/block:Title}
-        <div class='content'>{Body}</div>
-        <h1></h1>
       </article>
-      <main id='main'>
-        {block:Posts}
-        {block:Photo}
-          <header>
-            <h1>
-              <a href='{Permalink}'>{Title}</a>
-            </h1>
-          </header>
-        {/block:Photo}
+      {/block:Title}
+      <div class='content'>{Body}
         <footer>
           <ul>
             <li>
@@ -51,7 +41,7 @@
             {/block:HasTags}
           </ul>
         </footer>
-      </main>
+      </div>
       {/block:Text}
       {/block:Posts}
     </main>

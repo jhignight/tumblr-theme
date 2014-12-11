@@ -16,18 +16,8 @@
         %header
           %h1
             %a{href:"{Permalink}"} {Title}
-        {/block:Title}
-        .content {Body}
-        %h1
-      %main#main
-       %li{class:post-photo}
-        {block:Posts}
-        {block:Photo}
-          %header
-            %h1
-              %a{href:"{Permalink}"} {Title}
-              %img{src:"{PhotoURL-500"} alt{PhotoAlt}
-        {/block:Photo}
+      {/block:Title}
+      .content {Body}
         %footer
           %ul
             %li
