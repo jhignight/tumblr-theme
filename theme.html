@@ -8,7 +8,7 @@
   </head>
   <body>
     <header id='header'>
-      <h1>{Josh's Tumblr: Caveat Emptor!}</h1>
+      <h1>Josh's Tumblr: Caveat Emptor!</h1>
     </header>
     <main id='main'>
       {block:Posts}
@@ -100,6 +100,11 @@
           </div>
         </article>
         {/block:Link}
+        {block:Video}
+        <li class='{post video}'>
+          {Video-500}
+        </li>
+        {/block:Video}
       </article>
       {/block:Posts}
     </main>

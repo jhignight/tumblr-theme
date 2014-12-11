@@ -7,7 +7,7 @@
     %link{rel:"stylesheet",href:"http://jhignight.github.io/tumblr-theme/theme.css"}
   %body
     %header#header
-      %h1 {Josh's Tumblr: Caveat Emptor!}
+      %h1 Josh's Tumblr: Caveat Emptor!
     %main#main
       {block:Posts}
 
@@ -77,6 +77,10 @@
             {/block:HasTags}
         {/block:Link}
 
+        {block:Video}
+        %li{class: "{post video}"
+          {Video-500}
+        {/block:Video}
 
       {/block:Posts}
     %footer#footer
